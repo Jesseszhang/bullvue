@@ -34,6 +34,8 @@ module.exports = {
     'array-bracket-spacing': [2, "always"],
     "comma-dangle": [2, "never"],
     "comma-spacing": [2, { "before": false, "after": true }],
-    "eqeqeq": [2, "allow-null"]
+    "eqeqeq": [2, "allow-null"],
+    // 要求在数组括号内使用一个或多个空格、或折行
+    "array-bracket-spacing": 0
   }
 }
