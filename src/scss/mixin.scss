@@ -1,0 +1,234 @@
+// use @include font-dpr(16px);
+@mixin font-dpr($font-size) {
+	font-size: $font-size;
+
+	[data-dpr="2"] & {
+		font-size: $font-size * 2;
+	}
+
+	[data-dpr="3"] & {
+		font-size: $font-size * 3;
+	}
+}
+
+@mixin box-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+
+@mixin colors($text, $background, $border) {
+  color: $text;
+  background-color: $background;
+  border-color: $border;
+}
+
+// clearfix
+@mixin clearfix($extend: true) {
+  @if $extend {
+    @extend %clearfix;
+  }
+  @else {
+    &::before,
+    &::after {
+      content: "";
+      display: table;
+    }
+    &::after {
+      clear: both;
+    }
+  }
+}
+
+%clearfix {
+  @include clearfix(false);
+}
+
+// Center-align a block level element
+@mixin center-block($extend: true) {
+  @if $extend {
+    @extend %center-block;
+  }
+  @else {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+%center-block {
+  @include center-block(false);
+}
+
+// ellipsis
+@mixin ellipsis($extend: true) {
+  @if $extend {
+    @extend %ellipsis;
+  }
+  @else {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+%ellipsis {
+  @include ellipsis(false);
+}
+
+// ellipsis lines
+// only old webkit flex box
+@mixin ellipsis-lines($lines: 2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}
+
+// word-break
+@mixin word-break($extend: true) {
+  @if $extend {
+    @extend %word-break;
+  }
+  @else {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+}
+
+%word-break {
+  @include word-break(false);
+}
+
+// justify
+// 左右对齐
+@mixin justify($extend: true) {
+  @if $extend {
+    @extend %justify;
+  }
+  @else {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+%justify {
+  @include justify(false);
+}
+
+// triangle 三角箭头
+// 可采用空元素或伪元素生成，具体定位这里不涉及
+%triangle-basic {
+  content: "";
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+@mixin triangle($direction: top, $borderWidth: 6px, $borderColor: $colorC) {
+  @extend %triangle-basic;
+  @if $direction == top {
+    border-bottom: $borderWidth solid $borderColor;
+    border-left: $borderWidth dashed transparent;
+    border-right: $borderWidth dashed transparent;
+  }
+  @else if $direction == right {
+    border-left: $borderWidth solid $borderColor;
+    border-top: $borderWidth dashed transparent;
+    border-bottom: $borderWidth dashed transparent;
+  }
+  @else if $direction == bottom {
+    border-top: $borderWidth solid $borderColor;
+    border-left: $borderWidth dashed transparent;
+    border-right: $borderWidth dashed transparent;
+  }
+  @else if $direction == left {
+    border-right: $borderWidth solid $borderColor;
+    border-top: $borderWidth dashed transparent;
+    border-bottom: $borderWidth dashed transparent;
+  }
+}
+
+// v arrow 方向箭头
+@mixin v-arrow($direction: right, $borderWidth: 2px, $size: 10px) {
+  display: inline-block;
+  vertical-align: middle;
+  width: $size;
+  height: $size;
+  @if $direction == top {
+    border-top: $borderWidth solid currentColor;
+    border-right: $borderWidth solid currentColor;
+    transform: rotate(-45deg);
+  }
+  @else if $direction == right {
+    border-top: $borderWidth solid currentColor;
+    border-right: $borderWidth solid currentColor;
+    transform: rotate(45deg);
+  }
+  @else if $direction == bottom {
+    border-left: $borderWidth solid currentColor;
+    border-bottom: $borderWidth solid currentColor;
+    transform: rotate(-45deg);
+  }
+  @if $direction == left {
+    border-left: $borderWidth solid currentColor;
+    border-bottom: $borderWidth solid currentColor;
+    transform: rotate(45deg);
+  }
+}
+
+// animation-fade
+// @include animation-fade
+// @include animation-fade($from: false, $to: .5);
+// @include animation-fade($from: 1, $to: 0);
+@mixin animation-fade($name: animationFade, $from: 0, $to: false){
+  @keyframes #{animationFade} {
+    @if $from {
+      from {
+        opacity: $from;
+      }
+    }
+    @if $to {
+      to {
+        opacity: $to;
+      }
+    }
+  }
+}
+
+// animation-translate
+// @include animation-translate
+// @include animation-translate($from: x -100%);
+// @include animation-translate($from: xy -50% -50%, $to: y -100%);
+// @include animation-translate($from: y 100px, $to: y 0px);
+@mixin animation-translate($name: animationTranslate, $from: y -100%, $to: false) {
+  @keyframes #{$name} {
+    @if $from and length($from) > 1 {
+      from {
+        @if nth($from, 1) == x {
+          transform: translate(nth($from, 2), 0);
+        }
+        @if nth($from, 1) == y {
+          transform: translate(0, nth($from, 2));
+        }
+        @if nth($from, 1) == xy or nth($from, 1) == both {
+          transform: translate(nth($from, 2), nth($from, 3));
+        }
+      }
+    }
+    @if $to andd length($to) > 1 {
+      to {
+        @if nth($to, 1) == x {
+          transform: translate(nth($to, 2), 0);
+        }
+        @if nth($to, 1) == y {
+          transform: translate(0, nth($to, 2));
+        }
+        @if nth($to, 1) == xy or nth($to, 1) == both {
+          transform: translate(nth($to, 2), nth($to, 3));
+        }
+      }
+    }
+  }
+}
