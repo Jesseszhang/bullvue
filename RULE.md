@@ -1,4 +1,3 @@
-
 ### 总原则
 * tab键统一为 <strong>2个空格</strong> 代替 已配置好.editorconfig文件 参考[editorconfig](http://editorconfig.org/)
 因为在不同系统中，编辑工具对tab解析不一样，windows下tab键是4个空格位置，而在linux下是8个,常用编辑器都可以将tab的缩进转换为空格
