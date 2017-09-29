@@ -2,19 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>bullvue - bullvue</title>
+  <title>bullvue</title>
   <meta name="description" content="bullvue">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">loading</div>
 </body>
 <script>
   window.$docsify = {
+    markdown: {
+      // smartypants: true,
+      // renderer: {
+      //   link: function() {
+      //   }
+      // },
+      // markdown: function (marked, renderer) {
+      //   return marked
+      // }
+    },
+
+    // themeColor: '#3F51B5',
+
+    alias: {
+      // '/foo/(+*)': '/bar/$1',
+      // '/zh-cn/changelog': '/changelog',
+      // '/changelog': 'https://raw.githubusercontent.com/QingWei-Li/docsify/master/CHANGELOG'
+    },
+
     name: 'bullvue',
-    repo: ''
+
+    coverpage: true,
+
+    loadNavbar: true,
+
+    loadSidebar: true,
+
+    auto2top: false,
+
+    autoHeader: true,
+
+    noEmoji: true,
+
+    noEmoji: true,
+
+    executeScript: true,
+
+    maxLevel: 4,
+
+    nameLink: '/',
+
+    nameLink: {
+      '/': '/'
+    },
+
+    formatUpdated: '{MM}/{DD} {HH}:{mm}',
+
+    formatUpdated: function (time) {
+
+      return time
+    },
+
+    repo: 'https://github.com/Jesseszhang/bullvue/',
+
+    search: true, // 默认值
+
+    search : [
+      '/',            // => /README.md
+      '/guide',       // => /guide.md
+      '/get-started', // => /get-started.md
+      '/zh-cn/',      // => /zh-cn/README.md
+    ],
+
+    // 完整配置参数
+    search: {
+      maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      paths: 'auto', // or []
+      placeholder: 'Type to search',
+
+      // 支持本地化
+      placeholder: {
+        '/': 'Type to search'
+      },
+
+      noData: 'No Results!',
+
+      // 支持本地化
+      noData: {
+        '/': 'No Results'
+      },
+
+      // 搜索标题的最大程级, 1 - 6
+      depth: 3
+    },
+    plugins: [
+      function (hook) {
+        var footer = [
+          '<hr/>',
+          '<footer>',
+          '<span>write by <a href="https://github.com/Jesseszhang/">Jesse</a> &copy;2017.</span>',
+          '</footer>'
+        ].join('')
+
+        hook.afterEach(function (html) {
+          return html + footer
+        })
+      }
+    ]
   }
 </script>
 <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+<script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
+<script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+<script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
 </html>
