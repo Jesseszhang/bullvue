@@ -5,7 +5,7 @@
   - [<svg class="icon" aria-hidden="true"><use xlink:href="#icon-componentcopy"></use></svg> 基础组件](/base)
   - [<svg class="icon" aria-hidden="true"><use xlink:href="#icon-costom-component"></use></svg> 业务组件](/operation)
   - [<svg class="icon" aria-hidden="true"><use xlink:href="#icon-gongju2"></use></svg> 工具介绍](/tool)
-  - [<svg class="icon" aria-hidden="true"><use xlink:href="#icon-demo"></use></svg> 演示demo](/demo)
+  - [<svg class="icon" aria-hidden="true"><use xlink:href="#icon-demo"></use></svg> demo演示](/demo)
 
 - languages
   - [<svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhongguo"></use></svg> 简体中文](/)
