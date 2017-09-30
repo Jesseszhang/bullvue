@@ -1,0 +1,2 @@
+- [<svg class="icon" style="font-size: 16px; margin-right: 5px;" aria-hidden="true"><use xlink:href="#icon-download"></use></svg> 快速开始](/)
+- [<svg class="icon" style="font-size: 16px; margin-right: 5px;" aria-hidden="true"><use xlink:href="#icon-jianjie2"></use></svg> 简介](/demo)

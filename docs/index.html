@@ -5,47 +5,51 @@
   <title>bullvue</title>
   <meta name="description" content="bullvue">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700|Zilla+Slab:300,400,600,700|Fira+Mono"
+  rel="stylesheet">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="//unpkg.com/vuep/dist/vuep.css">
-  <style>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+  <style type="text/css">
     .app-nav li ul {
       overflow-y: inherit;
+    }
+    .icon {
+      width: 1em; height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+      font-size: 18px;
+    }
+    .github-corner {
+      z-index: 99;
     }
   </style>
 </head>
 <body>
-  <div id="app">loading</div>
+  <div id="app"><svg class="icon" style="font-size: 28px" aria-hidden="true"><use xlink:href="#icon-loading"></use></svg> loading</div>
 </body>
+<script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
+  mermaid.initialize({ startOnLoad: true });
+
   window.$docsify = {
+    markdown: {
+      renderer: {
+        smartypants: true
+      }
+    },
+
     ga: 'UA-107296370-1',
 
-    markdown: {
-      // smartypants: true,
-      // renderer: {
-      //   link: function() {
-      //   }
-      // },
-      // markdown: function (marked, renderer) {
-      //   return marked
-      // }
-    },
-
-    // themeColor: '#3F51B5',
-
-    alias: {
-      // '/foo/(+*)': '/bar/$1',
-      // '/zh-cn/changelog': '/changelog',
-      // '/changelog': 'https://raw.githubusercontent.com/QingWei-Li/docsify/master/CHANGELOG'
-    },
-
-    name: 'bullvue',
+    name: '<svg class="icon" style="font-size: 24px" aria-hidden="true"><use xlink:href="#icon-zan"></use></svg> bullvue',
 
     coverpage: true,
 
     loadNavbar: true,
 
-    loadSidebar: true,
+    loadSidebar: false,
 
     auto2top: false,
 
@@ -72,34 +76,30 @@
 
     repo: 'https://github.com/Jesseszhang/bullvue/',
 
-    search: true, // 默认值
+    search: true,
 
     search : [
-      '/',            // => /README.md
-      '/guide',       // => /guide.md
-      '/get-started', // => /get-started.md
-      '/zh-cn/',      // => /zh-cn/README.md
+      '/',
+      '/guide',
+      '/get-started',
+      '/zh-cn/',
     ],
 
-    // 完整配置参数
     search: {
-      maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-      paths: 'auto', // or []
+      maxAge: 86400000,
+      paths: 'auto',
       placeholder: 'Type to search',
 
-      // 支持本地化
       placeholder: {
         '/': 'Type to search'
       },
 
       noData: 'No Results!',
 
-      // 支持本地化
       noData: {
         '/': 'No Results'
       },
 
-      // 搜索标题的最大程级, 1 - 6
       depth: 3
     },
     plugins: [
@@ -118,6 +118,8 @@
     ]
   }
 </script>
+<script src="//at.alicdn.com/t/font_427997_ljv1zcsiz5ylow29.js"></script>
+<script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
 <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
 <script src="//unpkg.com/docsify/lib/plugins/ga.js"></script>
 <script src="//unpkg.com/vue/dist/vue.min.js"></script>
