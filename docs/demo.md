@@ -2,7 +2,7 @@
 
 <div class="iphone-bg">
   <div class="demo-wrap">
-    <iframe src="https://github.com/Jesseszhang/bullvue" class='demo-iframe' frameborder="0"></iframe>
+    <iframe src="http://zhangyanjian.com" class='demo-iframe'></iframe>
   </div>
 </div>
 
