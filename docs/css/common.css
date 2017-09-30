@@ -4,4 +4,14 @@ html, body {
   font-family: 'Nunito', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   width: 100%;
 }
+.iphone-bg {
+  width: 431px;
+  height: 877px;
+  overflow: hidden;
+  background: url('../assert/img/bg.png') center no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20px;
+}
 
