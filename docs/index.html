@@ -35,6 +35,10 @@
       margin: 0 auto;
       margin-top: 20px;
     }
+    a.edit-this-page {
+      float: right;
+      color: #42b983;
+    }
   </style>
 </head>
 <body>
@@ -81,7 +85,8 @@
 
     formatUpdated: function (time) {
 
-      return time
+      return time;
+
     },
 
     repo: 'https://github.com/Jesseszhang/bullvue/',
@@ -114,21 +119,22 @@
     },
     plugins: [
       function (hook, vm) {
-        var footer = [
-          '<hr/>',
-          '<footer>',
-          '<span>write by <a href="https://github.com/Jesseszhang/">Jesse</a> &copy;2017.</span>',
-          '</footer>'
-        ].join('')
-
-        hook.afterEach(function (html) {
-          return html + footer
+        hook.beforeEach(function (html) {
+          var url = 'https://github.com/Jesseszhang/bullvue/tree/master/docs/' + vm.route.file
+          var editHtml = '<a class="edit-this-page" href="' + url + '">Edit this page on GitHub<\/a>\n'
+          var footer = ['']
+          return html
+            + '\n----\n'
+            + 'Last modified {docsify-updated}'
+            + editHtml
+            + '\n----\n'
+            + footer.join('')
         })
       }
     ]
   }
 </script>
-<script src="//at.alicdn.com/t/font_427997_ljv1zcsiz5ylow29.js"></script>
+<script src="//at.alicdn.com/t/font_427997_5pspzi21rsmunmi.js"></script>
 <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
 <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
 <script src="//unpkg.com/docsify/lib/plugins/ga.js"></script>

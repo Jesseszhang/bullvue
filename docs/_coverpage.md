@@ -8,7 +8,7 @@
 - coming soon <svg class="icon" style="font-size: 20px" aria-hidden="true"><use xlink:href="#icon-rocket__easyi"></use></svg>
 
 [GitHub](https://github.com/Jesseszhang/bullvue)
-[Get Started](#quick-start)
+[Get Started](/README)
 
 <!-- 背景图片 -->
 <!-- ![](_media/bg.png) -->
