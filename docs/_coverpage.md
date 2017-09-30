@@ -2,7 +2,7 @@
 
 # <svg class="icon" style="font-size: 35px" aria-hidden="true"><use xlink:href="#icon-zan"></use></svg> bullvue
 
-> A powerful vue2 mobile component. <svg class="icon" style="font-size: 24px" aria-hidden="true"><use xlink:href="#icon-filled-">
+> A Powerful Vue2 Mobile Components. <svg class="icon" style="font-size: 24px" aria-hidden="true"><use xlink:href="#icon-filled-">
 
 - powerful easy to use <svg class="icon" style="font-size: 24px" aria-hidden="true"><use xlink:href="#icon-zan1">
 - coming soon <svg class="icon" style="font-size: 20px" aria-hidden="true"><use xlink:href="#icon-rocket__easyi"></use></svg>
