@@ -1,6 +1,6 @@
 ![logo](/assert/img/logo.svg)
 
-# <svg class="icon" style="font-size: 35px" aria-hidden="true"><use xlink:href="#icon-zan"></use></svg> bullvue
+# <svg class="icon" style="font-size: 35px" aria-hidden="true"><use xlink:href="#icon-zan"></use></svg> bullvue <small>1.0.0</small>
 
 > A Powerful Vue2 Mobile Components. <svg class="icon" style="font-size: 24px" aria-hidden="true"><use xlink:href="#icon-filled-">
 
