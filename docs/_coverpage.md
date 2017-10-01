@@ -1,4 +1,4 @@
-<!-- ![logo](media/icon.svg) -->
+![logo](/assert/img/logo.svg)
 
 # <svg class="icon" style="font-size: 35px" aria-hidden="true"><use xlink:href="#icon-zan"></use></svg> bullvue
 

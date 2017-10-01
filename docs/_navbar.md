@@ -6,6 +6,7 @@
   - [<svg class="icon" aria-hidden="true"><use xlink:href="#icon-costom-component"></use></svg> 业务组件](/operation)
   - [<svg class="icon" aria-hidden="true"><use xlink:href="#icon-gongju2"></use></svg> 工具介绍](/tool)
   - [<svg class="icon" aria-hidden="true"><use xlink:href="#icon-demo"></use></svg> demo演示](/demo)
+  - [<svg class="icon" aria-hidden="true"><use xlink:href="#icon-guize"></use></svg> 规则](/rule)
 
 - languages
   - [<svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhongguo"></use></svg> 简体中文](/)
