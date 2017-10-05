@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "bullvue",
   "author": "zhangyanjian <1355077450@qq.com>",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
