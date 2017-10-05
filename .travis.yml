@@ -17,5 +17,3 @@ script:
 branches:
   only:
     - master
-env:
- global:
