@@ -1,5 +1,24 @@
-.home-title {
-  font-size: 24px;
-  margin: 30px 0;
-  padding: 0 20px;
+@import "../../scss/mixin.scss";
+
+.bv-demo-page {
+  .home-title {
+    display: inline-block;
+    text-align: center;
+    font-size: 40px;
+    margin: 30px 0;
+    padding: 0 20px;
+  }
+
+  .bv-components-list {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  .bv-components-item {
+    height: 100px;
+    margin: 0 15px 20px;
+    border-radius: 5px;
+    background: #fff;
+    @include box-shadow(0 5px 15px 0 rgba(238, 243, 255, 0.5));
+    border: 1px solid black;
+  }
 }

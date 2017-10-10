@@ -20,9 +20,17 @@ exports.cssLoaders = function (options) {
     }
   }
 
+  var postcssLoader = {
+    loader: 'postcss-loader',
+    options: {
+      sourceMap: false
+    }
+  }
+
   function generateLoaders (loader, loaderOptions) {
     var loaders = [cssLoader]
     if (loader) {
+      loaders.push(postcssLoader)
       loaders.push({
         loader: loader + '-loader',
         options: Object.assign({}, loaderOptions, {

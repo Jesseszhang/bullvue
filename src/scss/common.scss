@@ -1,16 +1,17 @@
-@import "./variables.scss";
 @import "./reset.scss";
 @import "./animation.scss";
 @import "./function.scss";
 @import "./mixin.scss";
+@import "./variables.scss";
 
 html, body {
-  font-family: $fontFamily;
+  font-family: $fontFamily !important;
   background-color: $background-color;
   -webkit-overflow-scrolling: touch;
   user-select: none;
 }
 
+// http://www.iconfont.cn symbol引用
 .icon {
   width: 1em;
   height: 1em;

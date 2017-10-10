@@ -14,8 +14,9 @@ module.exports = {
     source: 'src',
     img: 'src',
     image: 'xlink:href'
-  }
-  // postcss: [
+  },
+  // in .vue file px to rem
+	// postcss: [
   //   require('postcss-px2rem')({ remUnit: 75 })
   // ]
 }
