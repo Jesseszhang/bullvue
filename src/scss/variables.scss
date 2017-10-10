@@ -9,7 +9,7 @@ $fontSize: 14px !default;
 
 $fontLineHeight: 1.5 !default;
 
-$fontFamily: -apple-system, BlinkMacSystemFont, "Seogoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "Source Han Sans CN", sans-serif !default;
+$fontFamily: "Nunito", -apple-system, BlinkMacSystemFont, "Seogoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "Source Han Sans CN", sans-serif !default;
 
 // 苹方, 冬青黑体，微软雅黑UI（win8.1+），微软雅黑，思源黑体（安卓）
 $fontCn:  "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "Source Han Sans CN" sans-serif !default;
@@ -34,11 +34,11 @@ $colorOverlay: rgba(0, 0, 0, .7) !default; // 遮罩层颜色
 // opacity($color, $amount)
 // mix($color1, $color2[, $amount])
 //-----------------------------------------------------
-$color3: #333;
-$color6: #666;
-$color9: #999;
-$colorC: #ccc;
-$colorF: #f5f5f5;
+$color3: #333 !default;
+$color6: #666 !default;
+$color9: #999 !default;
+$colorC: #ccc !default;
+$colorF: #f5f5f5 !default;
 
 $blue: #007aff !default;
 $orange: #ff9500 !default;
@@ -61,7 +61,7 @@ $radiusSmall: 3px !default;
 
 // timing-function
 //-----------------------------------------------------
-$timingFunction: cubic-bezier(0.42, 0, 0.58, 1);
+$timingFunction: cubic-bezier(0.42, 0, 0.58, 1) !default;
 
 // active state switch
 //-----------------------------------------------------
@@ -73,3 +73,30 @@ $zIndexHeader: 1000 !default;
 $zIndexFooter: 2000 !default;
 $zIndexPopup: 3000 !default;
 $zIndexOverlay: 4000 !default; // 默认高于header和footer部分
+
+// prefix
+//-----------------------------------------------------
+$prefix: b;
+
+// config color
+//-----------------------------------------------------
+$color-blue: #2196f3 !default;
+$color-white: #fff !default;
+$color-grey: #d9d9d9 !default;
+$success-color: #66bb6a !default;
+$warning-color: #ffee58 !default;
+$error-color: #ef5350 !default;
+$border-color: #c8c8cd !default;
+
+// background color
+//-----------------------------------------------------
+$background-color: #f5f5f9 !default;
+
+// button color
+//-----------------------------------------------------
+$button-default-color: #2196f3 !default;
+$button-danger-color: #ef5350 !default;
+$button-success-color: #66bb6a !default;
+$button-warning-color: #ffee58 !default;
+$button-orange-color: #ffa726 !default;
+
