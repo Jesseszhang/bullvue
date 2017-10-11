@@ -1,0 +1,13 @@
+[
+  {
+    "title": "基础组件 Base",
+    "icon": "",
+    "list": [
+      {
+        "name": "button",
+        "icon": "",
+        "path": "/button"
+      }
+    ]
+  }
+]
