@@ -1,0 +1,40 @@
+.rate-wrap {
+  display: inline-block;
+
+  .rate-item-wrap {
+    display: inline-block;
+    position: relative;
+    font-size: 0;
+    vertical-align: middle;
+    color: #eaeaea;
+
+    .rate-item {
+      display: inline-block;
+      font-size: 14px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rate-item.active {
+      color: #ffa842;
+    }
+
+    .rate-item-sub {
+      width: 50%;
+      color: #ffa842;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      font-size: 14px;
+    }
+  }
+
+  .rate-item-wrap:first-child {
+    margin-left: 0;
+  }
+
+  .hide {
+    display: none;
+  }
+}
