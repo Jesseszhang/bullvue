@@ -1,7 +1,7 @@
 import template from './app.tpl'
-import './app.scss';
+import './app.scss'
 
 export default {
   name: 'app',
   template
-};
+}
