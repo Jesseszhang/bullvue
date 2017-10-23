@@ -1,25 +1,25 @@
 ### 总原则
-tab键统一为2个空格，已配置好[editorconfig](http://editorconfig.org/)文件。
-优先使用[ECMAScript6](http://es6.ruanyifeng.com/)。
-项目使用[standardjs](https://standardjs.com/readme-zhcn.html)来规范js代码，[stylelintrc](https://stylelint.io/)来规范样式代码，[markdownlint](https://github.com/DavidAnson/markdownlint) 来规范文档。
-在此项目.vue文件被拆分成.tpl .js .scss三个文件，方便多窗口开发。
+1. tab键统一为2个空格，已配置好[editorconfig](http://editorconfig.org/)文件。
+2. 优先使用[ECMAScript6](http://es6.ruanyifeng.com/)。
+3. 项目使用[standardjs](https://standardjs.com/readme-zhcn.html)来规范js代码，[stylelintrc](https://stylelint.io/)来规范样式代码，[markdownlint](https://github.com/DavidAnson/markdownlint) 来规范文档。
+4. 在此项目.vue文件被拆分成.tpl .js .scss三个文件。
 
 ### 命名规范
-文件夹命名：文件夹名小驼峰命名法，eg：demo。
-文件命名：只能包含字母和数字，采用驼峰命名，首页一般采用index命名，eg：myDemo.js。
-图片命名：只能包含字母和数字，只能小写，多个词用“-”连接，eg：index-banner.jpg。
-css/scss 文件命名：css按功能命名：global.css（全局使用）、common.css（部分页面可共用），css按布局命名：layout.css（全部的整体框架布局），index.css（针对某个目录页面布局）。
-通用元素css命名，如.btn,.tb,.frm,.nav,.list,.item,.tag,.pic,.info,.tpl, 连字符命名。
-变量命名：驼峰式命名，如 addSite，变量集中声明，避免全局变量，变量名仅能包含字母、数字、下划线和美元符号，变量名不能以数字开头，避免使用保留字或语言构造命名。
-静态变量名需要下划线加大写 ex: NHU_JJH。
-函数命名：小驼峰式命名法。如getValue() isEmpty()。
-命名语义化， 简洁，表意清楚。避免使用中文拼音, 尽量使用简易的单词组合。
-vue 组件文件夹和文件名都以标签名同名（连字符命名法）。
+1. 文件夹命名：文件夹名小驼峰命名法，eg：demo。
+2. 文件命名：只能包含字母和数字，采用驼峰命名，首页一般采用index命名，eg：myDemo.js。
+3. 图片命名：只能包含字母和数字，只能小写，多个词用“-”连接，eg：index-banner.jpg。
+4. css/scss 文件命名：css按功能命名：global.css（全局使用）、common.css（部分页面可共用），css按布局命名：layout.css（全部的整体框架布局），index.css（针对某个目录页面布局）。
+5. 通用元素css命名，如.btn,.tb,.frm,.nav,.list,.item,.tag,.pic,.info,.tpl, 连字符命名。
+6. 变量命名：驼峰式命名，如 addSite，变量集中声明，避免全局变量，变量名仅能包含字母、数字、下划线和美元符号，变量名不能以数字开头，避免使用保留字或语言构造命名。
+7. 静态变量名需要下划线加大写 ex: NHU_JJH。
+8. 函数命名：小驼峰式命名法。如getValue() isEmpty()。
+9. 命名语义化， 简洁，表意清楚。避免使用中文拼音, 尽量使用简易的单词组合。
+10. vue 组件文件夹和文件名都以标签名同名（连字符命名法）。
 
 ### 编码规范：
 
 #### 1、通用规范
-  全部使用单引号 可以参照[standardjs](https://standardjs.com/readme-zhcn.html)
+全部使用单引号 可以参照[standardjs](https://standardjs.com/readme-zhcn.html)
 
 ```js
 var str = 'abc'
@@ -113,11 +113,11 @@ Meta标签的使用（根据需要选择）：
 <input data-id='1' data-name='zhangsan' />
 ```
 
-能以背景形式呈现的图片, 尽量写入css样式中，小图片采用css sprite或data url，当然如果图片需要添加特殊的alt标识或者需要打印等，则用img标签
-html中尽量避免使用style='xxx:xxx'的内嵌样式表。
-段落分隔符要使用实际对应的\<p>元素，而不是用多个\<br>标签，更不要用\&nbsp控制间距。
-特殊符号需要做转义，参考HTML [符号实体](http://www.w3school.com.cn/html/html_entities.asp)。
-HTML属性顺序（建议），保证易读性。
+1. 能以背景形式呈现的图片, 尽量写入css样式中，小图片采用css sprite或data url，当然如果图片需要添加特殊的alt标识或者需要打印等，则用img标签
+2. html中尽量避免使用style='xxx:xxx'的内嵌样式表。
+3. 段落分隔符要使用实际对应的\<p>元素，而不是用多个\<br>标签，更不要用\&nbsp控制间距。
+4. 特殊符号需要做转义，参考HTML [符号实体](http://www.w3school.com.cn/html/html_entities.asp)。
+5. HTML属性顺序（建议），保证易读性。
 
 ```
 id、class、name、data-*、src/for/type/href、title/alt
@@ -142,10 +142,10 @@ eg: <div id='myId' class='my' title='hello world'></div>
 
 #### 3、CSS/SCSS
 
-尽可能的通过继承和层叠重用已有样式，尽量避免太多重复跟业务相关的class。
-背景图片请尽可能使用sprite技术（不过，图片大小最好不超过60KB，否则还是用独立下载）。
-同一个页面css尽量都写到同一个css文件中（oop组件化最终也会打包压缩到同一文件中）。
-避免使用低效的选择器。
+1. 尽可能的通过继承和层叠重用已有样式，尽量避免太多重复跟业务相关的class。
+2. 背景图片请尽可能使用sprite技术（不过，图片大小最好不超过60KB，否则还是用独立下载）。
+3. 同一个页面css尽量都写到同一个css文件中（oop组件化最终也会打包压缩到同一文件中）。
+4. 避免使用低效的选择器。
 
 ```css
 body > *{…}
@@ -154,13 +154,13 @@ ul#top_blue_nav {…}
 #searbar span.submit a { … }
 ```
 
-从外部文件加载CSS，尽可能减少文件数，加载标签必须放在文件的 HEAD 部分，顺序是：全站级CSS，产品级CSS，页面级(外联)CSS，页面级(内联)CSS，内联CSS
-CSS的外部引用 LINK 标签加载，尽量避免使用@import。
-无特殊情况不要在CSS中使用 !important。
-禁止使用table布局，div也要避免多层嵌套，尽量少使用id，原则上Id用于父级别大规模单一元素，class用于重复使用的子模块中。
-颜色统一使用十六进制的颜色单位，使用color: #ff0000替代color: red，特殊场景需要用到rgba除外。
-正确使用缩写，例如navigation就可以缩写为nav，而author就不要缩写。
-书写格式，每个属性值独占一行（禁止写成单行），同时注意缩进规范，(如下例)。
+1. 从外部文件加载CSS，尽可能减少文件数，加载标签必须放在文件的 HEAD 部分，顺序是：全站级CSS，产品级CSS，页面级(外联)CSS，页面级(内联)CSS，内联CSS
+2. CSS的外部引用 LINK 标签加载，尽量避免使用@import。
+3. 无特殊情况不要在CSS中使用 !important。
+4. 禁止使用table布局，div也要避免多层嵌套，尽量少使用id，原则上Id用于父级别大规模单一元素，class用于重复使用的子模块中。
+5. 颜色统一使用十六进制的颜色单位，使用color: #ff0000替代color: red，特殊场景需要用到rgba除外。
+6. 正确使用缩写，例如navigation就可以缩写为nav，而author就不要缩写。
+7. 书写格式，每个属性值独占一行（禁止写成单行），同时注意缩进规范，(如下例)。
 
 ```css
 .header {
@@ -247,10 +247,10 @@ eg：
 }
 ```
 
-Positioning 处在第一位，因为他可以使一个元素脱离正常文本流，并且覆盖盒模型相关的样式。
-盒模型紧跟其后，因为他决定了一个组件的大小和位置。
-其他属性只在组件 内部 起作用或者不会对前面两种情况的结果产生影响，所以他们排在后面。
-关于完整的属性以及他们的顺序，请参考 [Recess](http://twitter.github.io/recess/)
+1. Positioning 处在第一位，因为他可以使一个元素脱离正常文本流，并且覆盖盒模型相关的样式。
+2. 盒模型紧跟其后，因为他决定了一个组件的大小和位置。
+3. 其他属性只在组件 内部 起作用或者不会对前面两种情况的结果产生影响，所以他们排在后面。
+4. 关于完整的属性以及他们的顺序，请参考 [Recess](http://twitter.github.io/recess/)
 
 减少选择器的长度，每个组合选择器选择器的条目应该尽量控制在 3 个以内
 
@@ -262,12 +262,12 @@ Positioning 处在第一位，因为他可以使一个元素脱离正常文本�
 
 #### 4、JS
 
-文件编码统一为utf-8，书写过程中，赋值或者执行代码结束必须有分号。
-js尽量使用oop思想做到组件化，每一个组件是一个单独的文件（或文件夹）。
-所有的前端异常，需要做到单一性处理，不能一个try catch里面包含多个可能性
-类命名：首字母大写，驼峰命名，eg： TabPanel
-函数命名：首字母小写，驼峰命名，eg：getValue()
-变量命名：首字母小写，驼峰命名，带有常用名词全部大写
+1. 文件编码统一为utf-8，书写过程中，赋值或者执行代码结束必须有分号。
+2. js尽量使用oop思想做到组件化，每一个组件是一个单独的文件（或文件夹）。
+3. 所有的前端异常，需要做到单一性处理，不能一个try catch里面包含多个可能性
+4. 类命名：首字母大写，驼峰命名，eg： TabPanel
+5. 函数命名：首字母小写，驼峰命名，eg：getValue()
+6. 变量命名：首字母小写，驼峰命名，带有常用名词全部大写
 
 ```js
 var myHomeAddress
@@ -297,11 +297,11 @@ var sex = '男'
 何时使用注释
 
 ```
-难于理解的代码段
-可能存在错误的代码段
-浏览器特殊的HACK代码
-复杂或者想吐槽的业务逻辑代码
-业务逻辑强相关的代码
+1. 难于理解的代码段
+2. 可能存在错误的代码段
+3. 浏览器特殊的HACK代码
+4. 复杂或者想吐槽的业务逻辑代码
+5. 业务逻辑强相关的代码
 ```
 
 对于引用值类型的，最好用字面量声明
@@ -339,7 +339,7 @@ function fun() {
 }
 
 // 逻辑块之间添加空行增加可读性
-function fun1() {
+function fun() {
   var _self = this
 
   for (var i = 0, len = arr.length i < len i++) {
@@ -351,7 +351,7 @@ function fun1() {
 如果是异步编程，回调函数遵循cb(err, data)模式，第一个参数为异常信息，第二个为正常返回值
 
 ```js
-readFile('XXX', function(err, data){
+readFile('xxx', function(err, data){
   if (err) {
       //异常处理
       return
@@ -376,6 +376,6 @@ if (true) {
 }
 ```
 
-使用字符串 'undefined' 替代 undefined 对变量进行判断
-条件判断请用 '===' '!==' ，尽量不要用 '=='、'!='
-除非特殊情况，否则不要使用eval函数
+1. 使用字符串 'undefined' 替代 undefined 对变量进行判断
+2. 条件判断请用 '===' '!==' ，尽量不要用 '=='、'!='
+3. 除非特殊情况，否则不要使用eval函数
