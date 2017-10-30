@@ -15,7 +15,7 @@ module.exports = {
     img: 'src',
     image: 'xlink:href'
   },
-  // in .vue file px to rem
+  // in .vue file px to rem .vue文件拆分了失效 全局 px 转换 rem 在.postcssrc.js 中配置 
 	// postcss: [
   //   require('postcss-px2rem')({ remUnit: 75 })
   // ]
