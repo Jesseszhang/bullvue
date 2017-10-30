@@ -1,0 +1,25 @@
+.toast-wrapper {
+  position: relative;
+
+  .toast-mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+
+  .toast-content-wrapper {
+    background: rgba(#000, #000, #000, .8);
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+}
