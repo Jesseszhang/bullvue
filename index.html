@@ -4,17 +4,24 @@
     <meta charset="utf-8">
     <meta content="telephone=no, email=no" name="format-detection"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="flexible" content="maximum-dpr=2" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=0.5,maximum-scale=0.5,user-scalable=no"> -->
+
+    <!-- <meta name="flexible" content="initial-dpr=2" /> -->
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js"></script>
     <title>bullvue</title>
     <!-- font Nunito -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700|Zilla+Slab:300,400,600,700|Fira+Mono" rel="stylesheet">
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div style="border: 1px soild blue"></div>
+    </div>
     <!-- built files will be auto injected -->
   </body>
   <!-- http://www.iconfont.cn symbol引用 -->
   <script src="//at.alicdn.com/t/font_427997_lnyxq3gycnd8to6r.js"></script>
   <!-- https://github.com/amfe/lib-flexible -->
-  <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js"></script>
+  <script>
+  document.write(lib.flexible.dpr)
+  </script>
 </html>
