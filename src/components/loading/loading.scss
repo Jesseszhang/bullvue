@@ -1,0 +1,71 @@
+@import '../../scss/mixin';
+@import '../../scss/function';
+
+.loading-wrapper {
+  position: relative;
+
+  .loading-mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, .7);
+  }
+
+  .loading-content-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+    // mixins should be separated out
+    @mixin ball-pulse($n: 3, $start: 1) {
+      @for $i from $start through $n {
+        > div:nth-child(#{$i}) {
+          animation: scaleLoader 0.75s delay(0.12s, $n, $i) infinite cubic-bezier(.2, .68, .18, 1.08);
+        }
+      }
+    }
+
+    .ball-pulse {
+      @include ball-pulse();
+
+      .loader-item {
+        @include balls();
+        @include global-animation();
+
+        display: inline-block;
+      }
+    }
+
+    .loading-content {
+      margin-top: 15px;
+    }
+  }
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0;
+}
+
+.fade-leave-active, .fade-enter-active {
+  transition: opacity .3s;
+}
+
+@keyframes scaleLoader {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  45% {
+    transform: scale(0.1);
+    opacity: 0.7;
+  }
+  80% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
